@@ -9,7 +9,6 @@ TensorFlow 2.x
 Transformers library
 You can install these dependencies using pip:
 
-Copy code
 pip install tensorflow transformers
 Usage
 Prepare your book text data by saving it to a text file in the root directory of this project. The file should be named book_text.txt.
@@ -18,13 +17,12 @@ Open a terminal or command prompt and navigate to the root directory of this pro
 
 Run the following command to train the GPT-2 model on the book text data:
 
-Copy code
 python train.py
 This will preprocess and tokenize the text data, define the GPT-2 model architecture, set up the training process, and train the model on the text data. The training process may take several hours or more depending on the size of the text data and the computing resources available.
 
 Once the model is trained, you can generate text based on a prompt using the following command:
 lua
-Copy code
+
 python generate.py --prompt "What is the meaning of life?"
 Replace the prompt text with your own prompt. The generated text will be printed to the console.
 
