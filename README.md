@@ -1,43 +1,46 @@
 #privateGPT (Color Theory GPT)
 
-Color Theory GPT is an AI-powered language model based on the privateGPT architecture. It has been specifically trained to extensively "slurp" and comprehend a wide range of source materials related to color theory. The model is designed to provide accurate and informative answers to questions regarding various topics covered in the book.
+Ask questions about color theory and receive answers using the power of the privateGPT model. This AI-powered language model is designed to provide accurate responses based on the extensive knowledge it has acquired from a range of color theory source materials. Color Theory GPT ensures complete privacy, as no data leaves your execution environment during the question-answering process.
 
 ## Features
 
-- **Comprehensive Color Theory Knowledge:** Color Theory GPT has been trained on a vast array of source materials related to color theory, enabling it to possess in-depth knowledge on the subject.
-- **Accurate and Informative Answers:** The model strives to provide precise and detailed answers to questions based on the information it has acquired from the source materials.
-- **Wide Topic Coverage:** Color Theory GPT is capable of answering questions across a broad spectrum of color theory topics, including color perception, color mixing, color harmonies, color symbolism, color psychology, and more.
-- **Natural Language Processing:** The model leverages advanced natural language processing techniques to understand and interpret questions in order to generate appropriate and coherent responses.
-- **Continual Learning:** The model is continually updated with the latest information related to color theory to ensure that it remains up to date and provides accurate responses.
+- **Private Question Answering:** Color Theory GPT allows you to ask questions and obtain answers without the need for an internet connection. All processing occurs locally within your execution environment.
+- **Comprehensive Color Theory Knowledge:** The model has been trained on a diverse set of color theory source materials, enabling it to provide insightful and informed answers to questions on various color theory topics.
+- **Wide Range of Supported Documents:** Color Theory GPT supports a variety of document types, including CSV, Word documents (DOCX and DOC), EverNote, email files (EML), EPub, HTML, Markdown, Outlook Message (MSG), Open Document Text (ODT), PDF, and PowerPoint documents (PPTX and PPT).
+- **Flexible Model Selection:** You can choose between the LlamaCpp or GPT4All models as the underlying language model for color theory question answering.
+- **Efficient Context Retrieval:** The model retrieves relevant context from the ingested documents stored in a local vector store, allowing it to generate answers based on the most appropriate information.
+- **Easy Environment Setup:** Color Theory GPT provides clear instructions for environment setup, including installing requirements and downloading the necessary language models.
 
 ## Usage
 
-To utilize Color Theory GPT and obtain answers to your questions, follow these steps:
+To use Color Theory GPT, follow these steps:
 
-1. **Enter your question:** Provide a clear and concise question related to color theory in the input field.
-2. **Wait for the response:** Color Theory GPT will analyze your question and generate a thoughtful and informative response based on its understanding of the topic.
-3. **Review the answer:** Read the generated response carefully to gain insights and information about the topic you queried.
-4. **Refine and explore further:** If you have additional questions or want to delve deeper into a specific aspect of color theory, feel free to ask subsequent questions.
+1. **Environment Setup:** Set up your environment by installing the required dependencies listed in the README file. Download the LLM model of your choice and place it in a directory. Configure the `.env` file with the appropriate variables.
+2. **Ingest Your Documents:** Prepare your color theory source materials by placing them in the `source_documents` directory. Ensure your documents are in one of the supported formats listed in the README.
+3. **Run Ingestion Script:** Execute the `ingest.py` script to ingest your documents and create embeddings. This process will create a local vector store with the accumulated information from your source materials.
+4. **Ask Questions:** Run the `privateGPT.py` script and enter your color theory-related questions when prompted. Color Theory GPT will utilize the local LLM model to process your question and provide answers based on the context retrieved from the local vector store.
+5. **Review and Repeat:** Read the generated answer along with the sources used for context. You can continue asking questions without rerunning the script; simply wait for the prompt and enter your next query.
 
-Please note that while Color Theory GPT has been trained on a diverse range of source materials, its responses are generated based on patterns and information it has learned and may not always reflect the absolute truth or personal opinions.
+Please note that the initial download of the embeddings model might require an internet connection, but the subsequent usage of the model does not rely on an internet connection.
 
 ## Limitations
 
-Although Color Theory GPT strives to provide accurate and informative answers, it is essential to be aware of its limitations:
+While Color Theory GPT aims to provide accurate and private question answering, it has some limitations:
 
-1. **No Contextual Awareness:** The model does not have knowledge of real-time events or access to the internet. It can only provide answers based on the information it has learned prior to its knowledge cutoff date in September 2021.
-2. **Possible Errors or Biases:** As with any AI language model, Color Theory GPT may occasionally generate incorrect or biased responses. Exercise critical thinking while evaluating its answers.
-3. **Limited Understanding of Visuals:** The model primarily processes and responds to textual inputs. It may have difficulty interpreting questions that require analysis of visual elements.
-4. **Legal and Ethical Considerations:** Users are responsible for ensuring that their usage of Color Theory GPT complies with all relevant laws and ethical guidelines. OpenAI, the creator of GPT-3.5, does not endorse or assume liability for any misuse of the model.
+- **Test Project Disclaimer:** Color Theory GPT is a test project and not intended for production use. Its model selection prioritizes privacy over performance, and optimizations for specific use cases may be required.
+- **Limited to Document Context:** The model relies on the context provided by the ingested color theory documents to generate answers. It may not have access to real-time information or internet sources.
+- **Visual Analysis Limitations:** Color Theory GPT primarily processes textual information and may have limitations in analyzing visual elements or color-related images.
+- **Model Performance:** The performance of the model may vary based on your machine specifications and the size of the documents being processed.
 
-## Feedback and Improvements
+## System Requirements
 
-OpenAI is dedicated to continually improving the performance and capabilities of its models. If you encounter any issues, have suggestions for improvement, or wish to provide feedback regarding Color Theory GPT, please contact the OpenAI team at [email address].
+Ensure that your system meets the following requirements:
 
-Your feedback is greatly appreciated and will contribute to enhancing the overall user experience of Color Theory GPT.
+- **Python Version:** Color Theory GPT requires
+
+ Python 3.10 or later to function correctly. Earlier versions of Python may not be compatible.
+- **C++ Compiler:** If you encounter any errors during the installation process, such as while building a wheel, you may need to install a C++ compiler. Refer to the README file for specific instructions based on your operating system.
 
 ## Disclaimer
 
-Color Theory GPT is an AI language model developed by OpenAI. While it has been trained on a wide range of data to provide accurate and up-to-date information, it is important to verify any critical information or consult authoritative sources when necessary. OpenAI does not guarantee the accuracy, reliability, or completeness of the responses generated by the model
-
-. Users should exercise discretion and judgement when utilizing the information provided by Color Theory GPT.
+Color Theory GPT is an experimental project aimed at exploring the feasibility of a privacy-focused question answering solution using language models and vector embeddings. It is not intended for production use and may not meet performance optimization requirements. Exercise caution and use your discretion when relying on the information provided by Color Theory GPT.
